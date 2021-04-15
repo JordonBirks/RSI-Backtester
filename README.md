@@ -2,12 +2,15 @@
 # This is program that backtests a simple RSI based trading strategy on a given stock. It then uploads a report of the backtest onto a excel workbook.
 
 import pandas as pd
+
 from pandas_datareader import data as wb
+
 from datetime import date
+
 import xlwings as xw
 
 
-# function to find rsi for a stock between 01/01/2016 and present day
+#function to find rsi for a stock between 01/01/2016 and present day
 def RSI(Ticker):
     # start date before 2016 as need some data to calculate rsi for 01/01/2016
     start = '2015-12-10'
